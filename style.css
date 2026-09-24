@@ -1,0 +1,97 @@
+{
+box-sizing: border-box;
+}
+
+html,
+body {
+margin: 0;
+min-height: 100%;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(135deg, #e9f7ff, #ffffff);
+color: #222;
+overflow-x: hidden;
+}
+
+.page {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 90px;
+text-align: center;
+}
+
+h1 {
+font-size: 48px;
+margin: 0 0 15px;
+color: #e3350d;
+}
+
+.intro {
+font-size: 18px;
+margin-bottom: 30px;
+}
+
+.pokemon-button {
+display: inline-block;
+padding: 16px 28px;
+border-radius: 12px;
+background: #e3350d;
+color: white;
+text-decoration: none;
+font-size: 20px;
+font-weight: bold;
+box-shadow: 0 5px 0 #a92308;
+transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.pokemon-button:hover {
+transform: translateY(-2px);
+box-shadow: 0 7px 0 #a92308;
+}
+
+.pokemon-button:active {
+transform: translateY(3px);
+box-shadow: 0 2px 0 #a92308;
+}
+
+/*
+The secret text is technically on the page,
+but is invisible until the user selects/highlights it.
+*/
+.secret-area {
+margin-top: 120px;
+width: 90%;
+max-width: 600px;
+user-select: text;
+-webkit-user-select: text;
+}
+
+.secret-text {
+margin: 0;
+color: transparent;
+font-size: 24px;
+line-height: 2;
+}
+
+/* Makes the hidden word appear when highlighted */
+.secret-text::selection {
+color: #111;
+background: #ffe135;
+}
+
+.secret-text::-moz-selection {
+color: #111;
+background: #ffe135;
+}
+
+/* Optional extra space so you can drag downward to find it */
+.secret-area {
+min-height: 300px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+}
