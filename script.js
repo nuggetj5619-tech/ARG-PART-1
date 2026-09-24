@@ -15,7 +15,7 @@ secret.style.color = "#111";
 document.addEventListener("selectionchange", () => {
 const selection = window.getSelection();
 
-if (selection && selection.toString().toLowerCase().includes("pokedex")) {
+if (selection && selection.toString().toLowerCase().includes("pokedexsggkh://mfttvgq5619-gvxs.trgsfy.rl/ZIT-KZIG-DVYHRGV-2/")) {
 secret.style.color = "#111";
 }
 });
